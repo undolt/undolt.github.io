@@ -1,0 +1,255 @@
+:root{
+  --header-height: 3rem;
+  --font-semi: 600;
+}
+
+/*===== Colores =====*/
+:root{
+  --nav-color: blue;
+  --box-shadow-color:rgba(12, 9, 8, 0.877);
+  --sub-background-color:rgba(226, 187, 14, 0.527);
+  --background-color:rgb(198, 220, 223);
+  --first-color: #0fa18e;
+  --second-color: #01131d;
+  --third-color:#0fa18e;
+}
+/***icon***/
+:root{
+  --iconsize:25px;
+  --iconpadding:5px;
+  --iconbox:45px;
+}
+
+/*===== Fuente y tipografia =====*/
+:root{
+  --body-font: 'Poppins', sans-serif;
+  --big-font-size: 2rem;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: 0.938rem;
+  --project-title:25px;
+  --project-sub-title:15px;
+}
+@media screen and (min-width: 798px){
+  :root{
+    --big-font-size: 3.5rem;
+    --h2-font-size: 2rem;
+    --normal-font-size: 1rem;
+  }
+}
+
+/*===== Margenes =====*/
+:root{
+  --mb-1: 0.5rem;
+  --mb-2: 1rem;
+  --mb-3: 1.5rem;
+  --mb-4: 2rem;
+  --mb-5: 2.5rem;
+  --mb-6: 3rem;
+}
+
+/*===== z index =====*/
+:root{
+  --z-back: -10;
+  --z-normal: 1;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/*===== BASE =====*/
+*{
+  padding: 0px;
+  margin: 0px;
+}
+html{
+  scroll-behavior: smooth;
+  background-color: var(--background-color);
+}
+body{
+  margin: var(--header-height) 0 0 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  color: var(--second-color);
+}
+.bd-grid{
+  max-width: 1024px;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-column-gap: 2rem;
+  width: calc(100% - 2rem);
+  margin: auto;
+
+}
+/*===All about the header===*/
+.l-header{
+  margin:0px;
+  padding: 5px;
+  width: 100%;
+  height: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-size: 21px;
+  z-index: var(--z-fixed);
+  background-color: #fff;
+  box-shadow: 0 1px 4px var(--box-shadow-color);
+}
+.nav{
+  margin: auto;
+  height: var(--header-height);
+  display: flex;
+  padding: 0px 5px;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: var(--font-semi);
+}
+.nav__link{
+  text-decoration: none;
+}
+.nav__toggle{
+  display: none;
+}
+.nav__list{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__item a{
+  color: var(--nav-color);
+}
+@media screen and (max-width: 798px){
+  .nav__toggle{
+    display: block;
+  }
+  .nav__menu{
+    position: fixed;
+    top: var(--header-height);
+    right: -100%;
+    width: 100%;
+    background-color: #fff;
+    transition: .5s;
+    text-align: center;
+  }
+  .nav__list{
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 799px){
+  .nav__logo{
+    width: 35%;
+  }
+  .nav__menu{
+    width: 65%;
+  }
+}
+.nav__item{
+  margin-bottom: var(--mb-4);
+}
+.nav__link{
+  position: relative;
+  color: #fff;
+}
+.nav__link:hover{
+  position: relative;
+}
+.nav__link:hover::after{
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0.18rem;
+  left: 0;
+  top: 25px;
+  background-color: var(--first-color);
+}
+.nav__logo{
+  color: var(--second-color);
+  text-decoration: none;
+}
+.nav__logo span{
+  color: white;
+  background-color: var(--nav-color);
+  padding: 2px 2px 0px 2px;
+  border-radius: 50px 50px 0px 0px;
+}
+.nav__logo b{
+  color: var(--first-color);
+  padding-left: 3px;
+  font-size: 25px;
+}
+.nav__toggle{
+  color: var(--second-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/*Active menu*/
+.active::after{
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0.18rem;
+  left: 0;
+  top: 25px;
+  background-color: var(--first-color);
+}
+
+/*Show menu*/
+.show{
+  right: 0;
+}
+/*===All about section===*/
+.section__all{
+  height: 100vh;
+}
+/*===All about footer===*/
+.footer__all{
+  padding-top:25px ;
+  width: 100%;
+  background-color: black;
+}
+.footer__logo{
+  font-size: 25px;
+  color: white;
+  text-decoration: none;
+}
+.footer__logo span{
+  background-color: var(--nav-color);
+  padding: 2px 2px 0px 2px;
+  border-radius: 50px 50px 0px 0px ;
+}
+.footer_subpart_heading{
+  color: white;
+  font-size: 18px;
+}
+.footer__con{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.footer_subpart{
+  width: 250px;
+  margin: 5px;
+}
+.footer_subpart ul{
+  list-style: none;
+}
+.footer_subpart ul li{
+  padding: 3px 3px 3px 15px;
+}
+.footer_subpart a{
+  color: white;
+  text-decoration: none;
+}
+.footer__reserved{
+  color: white;
+  text-align: right;
+  padding: 15px 0px 15px 0px;
+}
+.footer__reserved span{
+  background-color: white;
+  color: black;
+  padding: 5px;
+  border-radius: 50px;
+  font-size: 15px;
+}
