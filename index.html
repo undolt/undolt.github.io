@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="undolt assigment solver">
+	<link rel="stylesheet" type="text/css" href="assert/css/index.css">
+	<link rel="stylesheet" type="text/css" href="assert/boxicons-2.1.2/css/boxicons.min.css">
+	<link rel="stylesheet" type="text/css" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
+	<title>Undolt , the Assigment Solver</title>
+</head>
+<body>
+	 <!--===== HEADER =====-->
+     <header class="l-header">
+        <nav class="nav bd-grid">
+            <div class="nav_logo_div">
+            	<a href="#" class="nav__logo"><span>U</span>n<span>D</span>olt<b>.</b></a>
+            </div>
+
+            <div class="nav__menu" id="nav-menu">
+                <div class="nav__list">
+                    <div class="nav__item"><a href="#home" class="nav__link active">Home</a></div>
+                    <div class="nav__item"><a href="#about" class="nav__link">About Us</a></div>
+                    <div class="nav__item"><a href="#work" class="nav__link">FAQs</a></div>
+                    <div class="nav__item"><a href="#contact" class="nav__link">Contact Us</a></div>
+                    <div class="nav__item"><a href="#skills" class="nav__link">Process</a></div>
+                    <div class="nav__item"><a href="#skills" class="nav__link">log In</a></div>
+                </div>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+              	<i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+    <section class="home__all section__all" id="home">
+    	
+    </section>
+    <section class="contact__all section__all" id="contact">
+    	
+    </section>
+    <footer class="footer__all">
+    	<div class="bd-grid">
+    		<div class="footer_logo_div">
+            	<a href="#" class="footer__logo"><span>U</span>n<span>D</span>olt<b>.</b></a>
+        	</div>
+        	<div class="footer__con">
+	        	<div class="footer__service footer_subpart">
+	        		<h4 class="footer_subpart_heading">Service</h4>
+	        		<ul>
+	        			<li><a href="#" class="footer__link">Live Sessions</a></li>
+	        			<li><a href="#" class="footer__link">Video Solution</a></li>
+	        			<li><a href="#" class="footer__link">Assigment help</a></li>
+	        			<li><a href="#" class="footer__link">Online Lab Report Help</a></li>
+	        			<li><a href="#" class="footer__link">Pay Someone to Solve your Homework</a></li>
+	        			<li><a href="#" class="footer__link">Math Problem Solver</a></li>
+	        			<li><a href="#" class="footer__link">Blank...</a></li>
+	        			<li><a href="#" class="footer__link">Blank...</a></li>
+	        		</ul>
+	        	</div>
+
+	        	<div class="footer__subject footer_subpart">
+	        		<h4 class="footer_subpart_heading">Subjects</h4>
+	        		<ul>
+	        			<li><a href="#" class="footer__link">Mathematics</a></li>
+	        			<li><a href="#" class="footer__link">Data Science</a></li>
+	        			<li><a href="#" class="footer__link">Blank...</a></li>
+	        			<li><a href="#" class="footer__link">Blank...</a></li>
+	        			<li><a href="#" class="footer__link">Blank...</a></li>
+	        			<li><a href="#" class="footer__link">Blank...</a></li>
+	        			<li><a href="#" class="footer__link">Blank...</a></li>
+	        			<li><a href="#" class="footer__link">Blank...</a></li>
+	        		</ul>
+	        	</div>
+
+	        	<div class="footer__feature footer_subpart">
+	        		<h4 class="footer_subpart_heading"> Features</h4>
+	        		<ul>
+	        			<li><a href="#" class="footer__link">Top Expert</a></li>
+	        			<li><a href="#" class="footer__link">Plagiarism Free Solution</a></li>
+	        			<li><a href="#" class="footer__link">100% cureect Solution</a></li>
+	        			<li><a href="#" class="footer__link">24/7 Availability</a></li>
+	        			<li><a href="#" class="footer__link">Cost Effective</a></li>
+	        			<li><a href="#" class="footer__link">blank...</a></li>
+	        			<li><a href="#" class="footer__link">blank...</a></li>
+	        			<li><a href="#" class="footer__link">blank...</a></li>
+	        		</ul>
+	        	</div>
+
+	        	<div class="footer_about footer_subpart">
+	        		<h4 class="footer_subpart_heading">About</h4>
+	        		<ul>
+	        			<li><a href="#" class="footer__link">Careers</a></li>
+	        			<li><a href="#" class="footer__link">FAQs</a></li>
+	        			<li><a href="#" class="footer__link">Refund Policy</a></li>
+	        			<li><a href="#" class="footer__link">Privacy Policy</a></li>
+	        			<li><a href="#" class="footer__link">Blank...</a></li>
+	        			<li><a href="#" class="footer__link">Blank...</a></li>
+	        			<li><a href="#" class="footer__link">Blank...</a></li>
+	        			<li><a href="#" class="footer__link">Blank...</a></li>
+	        		</ul>	
+	        	</div>
+        	</div>
+        	<div class="footer__reserved">&copy 2022 UnDolt. All Rights Reserved</div>
+        </div>
+    </footer>
+<script type="text/javascript">
+/*===== MENU SHOW =====*/ 
+const showMenu = (toggleId, navId) =>{
+    const toggle = document.getElementById(toggleId),
+    nav = document.getElementById(navId)
+
+    if(toggle && nav){
+        toggle.addEventListener('click', ()=>{
+            nav.classList.toggle('show')
+        })
+    }
+}
+showMenu('nav-toggle','nav-menu')
+
+/*===== ACTIVE AND REMOVE MENU =====*/
+const navLink = document.querySelectorAll('.nav__link');   
+
+function linkAction(){
+  /*Active link*/
+  navLink.forEach(n => n.classList.remove('active'));
+  this.classList.add('active');
+  
+  /*Remove menu mobile*/
+  const navMenu = document.getElementById('nav-menu')
+  navMenu.classList.remove('show')
+}
+navLink.forEach(n => n.addEventListener('click', linkAction));
+
+
+</script>
+</body>
+</html>
