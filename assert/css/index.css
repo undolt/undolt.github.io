@@ -82,7 +82,7 @@ body{
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: var(--background-color);
+  background-color: white;
 }
 #loder{
   display: inline-block;
@@ -218,6 +218,9 @@ body{
   .nav__list{
     flex-direction: column;
   }
+  .nav__item{
+    padding: 0px;
+  }
 }
 @media screen and (min-width: 999px){
   .nav__logo{
@@ -228,7 +231,7 @@ body{
   }
 }
 .nav__item{
-  margin-bottom: var(--mb-4);
+  margin-bottom: var(--mb-2);
 }
 .nav__link{
   position: relative;
