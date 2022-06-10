@@ -197,7 +197,7 @@ body{
 .nav__item a{
   color: var(--nav-color);
 }
-@media screen and (max-width: 798px){
+@media screen and (max-width: 998px){
   .nav__toggle{
     display: block;
   }
@@ -218,7 +218,7 @@ body{
     flex-direction: column;
   }
 }
-@media screen and (min-width: 799px){
+@media screen and (min-width: 999px){
   .nav__logo{
     width: 35%;
   }
