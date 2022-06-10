@@ -365,6 +365,10 @@ body{
 
 /*=====All about the css of the log_in.html =====*/
 .log_in_all{
+  background-image: url("../img/sing_in.svg");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: 50%;
   height: 100vh;
   width: 100%;
   display: flex;
@@ -373,17 +377,17 @@ body{
   justify-self: center;
 }
 .log_in_from{
-    background-color: white;
+   /* background-color: white;*/
     padding: 15px 10px;
-    height: 280px;
+    height: 300px;
     width: 400px;
     border-radius: 10px;
-    box-shadow: 1px 2px 2px var(--nav-color);
   }
 .log_in_from:hover{
     box-shadow: 1px 5px 10px var(--nav-color);
+    background-color: rgba(255,255,255,0.8);
   }
-.from_log_in{
+.from_log_in,.from_sing_up{
     height: 70%;
     width: 80%;
     margin: auto;
@@ -391,10 +395,10 @@ body{
     flex-direction: column;
     justify-content:space-evenly;
   }
-.log_in_from .nav_logo_div a{
+.log_in_from .nav_logo_div a,.sing_up_from .nav_logo_div a{
   font-size: 25px;
 }
-.log_in_from .nav_logo_div{
+.log_in_from .nav_logo_div,.sing_up_from .nav_logo_div{
   padding: 10px;
   display: flex;
   justify-content: right;
@@ -410,6 +414,17 @@ body{
 .log_in_input .log_input input{
   height: 25px;
   width: 95%;
+  padding: 2px 7px;
+  color: var(--nav-color);
+  font-size: 15px;
+  font-weight: 600;
+  background-color: rgba(20, 20, 200, 0.01);
+  border: 1px solid var(--nav-color);
+  border-radius: 5px;
+  outline: none;
+}
+.log_in_input .log_input input:focus{
+  border:1px solid red;
 }
 .log_in_label{
   width: 30%;
@@ -419,6 +434,60 @@ body{
   font-weight: 500;
   display: flex;
   align-items: center;
+}
+@media screen and (max-width: 800px){
+   .log_in_all{
+    background-image: url(../img/log_in.svg);
+    background-position: top;
+    background-size: 80%;
+    background-repeat: no-repeat;
+   }
+}
+.log_in_submit{
+  display: flex;
+  justify-content: right;
+  padding: 1%;
+
+}
+.log_in_submit .submit_btn{
+  padding: 5px 10px;
+  color: var(--nav-color);
+  outline: none;
+  font-size: 16px;
+  border: 1px solid var(--nav-color);
+  font-weight: 500;
+  border-radius: 5px;
+}
+.log_in_submit .submit_btn:hover{
+  color: white;
+  background-color: var(--nav-color);
+  outline: none;
+  font-size: 16px;
+  border: 1px solid var(--nav-color);
+
+}
+.log_in_cra ,.forget_password,.log_in_cont{
+  display: flex;
+  justify-content: left;
+  padding-top: 5px ;
+}
+.sing_in_img{
+  z-index: 100;
+  position: absolute;
+  width: 425px;
+}
+.sing_up{
+  display:none ;
+}
+.sing_up_from{
+  padding: 15px;
+  border-radius: 10px;
+  width: 400px;
+  height: 350px;
+}
+.sing_up_from:hover{
+  box-shadow: 1px 5px 10px var(--nav-color);
+  background-color: rgba(255,255,255,0.8);
 }
 @media screen and  (max-width: 501px){
   .log_in_all{
@@ -441,30 +510,8 @@ body{
   }
   .log_in_from .log_input{
     width: 100%;
-    background-color: hotpink;
   }
-    .log_in_from .log_input input{
+  .log_in_from .log_input input{
       width: 100%;
     }
-}
-.log_in_submit{
-  display: flex;
-  justify-content: right;
-  padding: 1%;
-
-}
-.log_in_submit .submit_btn{
-  padding: 5px;
-  color: var(--nav-color);
-  font-size: 16px;
-  font-weight: 500;
-}
-.log_in_submit .submit_btn:hover{
-  color: white;
-  background-color: var(--nav-color);
-}
-.log_in_cra ,.forget_password{
-  display: flex;
-  justify-content: right;
-  padding: 2px;
 }

@@ -12,23 +12,52 @@
 
 <body>
 	<div class="log_in_all">
-		<div class="sing_up" hidden>
+		<div id="sing_up" hidden>
 			<div class="sing_up_from" >
-				
+				<div class="nav_logo_div">
+            		<a href="#" class="nav__logo"><span>U</span>n<span>D</span>olt<b>.</b></a>
+           		</div>
+				<form class="from_sing_up">
+					<div class="log_in_input user_name">
+						<div class="log_in_label"><label>First Name </label></div>
+						<div class="log_input"><input type="text" name="f_name"></div>
+					</div>
+					<div class="log_in_input user_name">
+						<div class="log_in_label"><label>Last Name </label></div>
+						<div class="log_input"><input type="text" name="l_name"></div>
+					</div>
+					<div class="log_in_input user_id">
+						<div class="log_in_label"><label>User ID </label></div>
+						<div class="log_input"><input type="text" name="user_id"></div>
+					</div>
+					<div class="log_in_input password">
+						<div class="log_in_label"><label>Password </label></div>
+						<div class="log_input"><input type="password" name="password"></div>
+					</div>
+					<div>
+						<div class="log_in_submit"><button class="submit_btn">Sign Up</button></div>
+					</div>
+				</form>
+				<div class="log_in_cont">
+					have an Account? <a id="log_in_btn" href="#log_in" onclick="change_state_2();">Sign In</a>
+				</div>
+				<div class="forget_password">
+					<a href="#">Forget password?</a>
+				</div>
 			</div>
 		</div>
-		<div class="log_in">
+		<div class="log_in" id="log_in">
 			<div class="log_in_from">
 				<div class="nav_logo_div">
             		<a href="#" class="nav__logo"><span>U</span>n<span>D</span>olt<b>.</b></a>
            		</div>
 				<form class="from_log_in" method="post">
 					<div class="log_in_input user_id">
-						<div class="log_in_label"><label>User ID</label></div>
+						<div class="log_in_label"><label>User ID </label></div>
 						<div class="log_input"><input type="text" name="user_id"></div>
 					</div>
 					<div class="log_in_input password">
-						<div class="log_in_label"><label>password</label></div>
+						<div class="log_in_label"><label>Password </label></div>
 						<div class="log_input"><input type="password" name="password"></div>
 					</div>
 					<div>
@@ -36,7 +65,7 @@
 					</div>
 				</form>
 				<div class="log_in_cra">
-					Don't have an Account? <a href="#">Sign Up</a>
+					Don't have an Account? <a id="sing_up_btn" href="#sing_up" onclick="change_state_1();">Sign Up</a>
 				</div>
 				<div class="forget_password">
 					<a href="#">Forget password?</a>
@@ -45,4 +74,15 @@
 		</div>
 	</div>
 </body>
+<script type="text/javascript">
+	
+	function change_state_1(){
+		document.getElementById('sing_up').style.display='flex';
+		document.getElementById('log_in').style.display='none';
+	}
+	function change_state_2(){
+		document.getElementById('log_in').style.display='flex';
+		document.getElementById('sing_up').style.display='none';
+	}
+</script>
 </html>
