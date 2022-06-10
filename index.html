@@ -5,10 +5,19 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="undolt assigment solver">
 	<link rel="stylesheet" type="text/css" href="assert/css/index.css">
-	<link rel="stylesheet" type="text/css" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
+	<link rel="stylesheet" type="text/css" href="assert/boxicons-2.1.2/css/boxicons.min.css">
+	<!--<link rel="stylesheet" type="text/css" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">-->
 	<title>Undolt , the Assigment Solver</title>
 </head>
-<body>
+<body onload='onload_ch();'>
+	<div id="loder_set">
+	<div id="loder" >
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+	</div>
 	 <!--===== HEADER =====-->
      <header class="l-header">
         <nav class="nav bd-grid">
@@ -20,9 +29,10 @@
                 <div class="nav__list">
                     <div class="nav__item"><a href="#home" class="nav__link active">Home</a></div>
                     <div class="nav__item"><a href="#about" class="nav__link">About Us</a></div>
-                    <div class="nav__item"><a href="#skills" class="nav__link">Skills</a></div>
-                    <div class="nav__item"><a href="#work" class="nav__link">FQS</a></div>
                     <div class="nav__item"><a href="#contact" class="nav__link">Contact Us</a></div>
+                    <div class="nav__item"><a href="#skills" class="nav__link">Process</a></div>
+                    <div class="nav__item"><a href="#work" class="nav__link">FAQs</a></div>
+                    <div class="nav__item"><a href="log_in.html" class="nav__log_in">log In <i class="bx bx-log-in-circle"></i></a></div> 
                 </div>
             </div>
 
@@ -41,6 +51,13 @@
     	<div class="bd-grid">
     		<div class="footer_logo_div">
             	<a href="#" class="footer__logo"><span>U</span>n<span>D</span>olt<b>.</b></a>
+            	<div class="social_icon_footer">
+            		<div class="social_icon"><a href="#"><i class="bx bxl-facebook"></i></a></div>
+            		<div class="social_icon"><a href="#"><i class="bx bxl-whatsapp"></i></a></div>
+            		<div class="social_icon"><a href="#"><i class="bx bxl-twitter"></i></a></div>
+            		<div class="social_icon"><a href="#"><i class="bx bxl-instagram-alt"></i></a></div>
+            		<div class="social_icon"><a href="#"><i class="bx bxl-linkedin"></i></a></div>
+            	</div>
         	</div>
         	<div class="footer__con">
 	        	<div class="footer__service footer_subpart">
@@ -102,7 +119,17 @@
         	<div class="footer__reserved">&copy 2022 UnDolt. All Rights Reserved</div>
         </div>
     </footer>
+</body>
+
 <script type="text/javascript">
+function sleep(ms){
+	return new Promise(resolve => setTimeout(resolve,ms));
+}
+async function onload_ch(){
+	await sleep(2000);
+	//alert('your page is loaded');
+	document.getElementById('loder_set').style.display='none';
+}
 /*===== MENU SHOW =====*/ 
 const showMenu = (toggleId, navId) =>{
     const toggle = document.getElementById(toggleId),
@@ -132,5 +159,4 @@ navLink.forEach(n => n.addEventListener('click', linkAction));
 
 
 </script>
-</body>
 </html>
