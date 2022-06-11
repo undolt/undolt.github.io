@@ -24,7 +24,7 @@
 						<div class="up_nav_link" onclick="shift_nav_move();"><i class="bx bxs-offer"></i><a href="#std_offers">Offers</a></div>
 					</div>
 					<div class="below_nav">
-						<div><i class="bx bx-log-out-circle"></i> Log Out</div>
+						<div class="log_out_btn"><i class="bx bx-log-out-circle"></i> Log Out</div>
 					</div>
 				</div>	
 				<div class="dash_icon"><i class="bx bx-fast-forward" id="dash_nav_link" onclick="shift_nav();"></i>
@@ -70,6 +70,9 @@
 		if(d_width <= 900){
 		document.getElementById('dashboard_nav').style.left='-170px';
 		}
+	}
+	window.onresize=function(event){
+		document.location.reload(true);
 	}
 </script>
 </html>

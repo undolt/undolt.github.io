@@ -63,6 +63,7 @@
 }
 html{
   background-color: var(--background-color);
+  scroll-behavior: smooth;
 }
 
 .bd-grid{
@@ -72,7 +73,6 @@ html{
   grid-column-gap: 2rem;
   width: calc(100% - 2rem);
   margin: auto;
-  background-color: green;
 }
 .nav__logo{
   font-size: 25px;
@@ -97,6 +97,7 @@ html{
   display: none;
 }
 .dash_icon i{
+  color: white;
   background-color: var(--nav-color);
   padding: 5px;
   font-size: var(--iconsize);
@@ -117,7 +118,6 @@ html{
 .dashboard_content{
   margin-left: var(--dashbord-nav-len);
   width: calc(100% - var(--dashbord-nav-len));
-  background-color: red;
 }
 .all_nav{
   display: flex;
@@ -126,6 +126,7 @@ html{
   height: 85%;
 }
 .stud_sub_con{
+  padding: 27px;
   height: 100vh;
 }
 .up_nav a{
@@ -142,13 +143,24 @@ html{
   padding: 2px;
   font-size: 20px;
 }
+.log_out_btn{
+  border-radius: 5px;
+  border: 1px solid var(--nav-color);
+  width: 85px;
+  padding: 5px;
+  color: var(--nav-color);
+  font-weight: bold;
+}
+.log_out_btn i{
+   font-weight: bold;
+}
+.log_out_btn:hover{
+  background-color: var(--nav-color);
+  color: white;
+}
 @media screen and (max-width: 900px){
   .bd-grid{
     width: 100%;
-  }
-  html{
-    background-color: green;
-
   }
   .dashboard_all{
     width: 100%;
@@ -163,7 +175,6 @@ html{
   .dashboard_content{
   margin-left:10px;
   width: calc(100% - 10px);
-  background-color: red;
  }
  .dash_icon{
   display: flex;
