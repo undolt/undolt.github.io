@@ -323,7 +323,7 @@ body{
   display: flex;
   flex-direction: row;
   padding: 10px 0px;
-  justify-content: right;
+  justify-content: center;
 }
 .footer_subpart_heading{
   color: var(--nav-color);
@@ -404,7 +404,7 @@ body{
 .log_in_from .nav_logo_div,.sing_up_from .nav_logo_div{
   padding: 10px;
   display: flex;
-  justify-content: right;
+  justify-content: center;
 }
 .log_in_input{
   display: flex;
@@ -448,7 +448,7 @@ body{
 }
 .log_in_submit{
   display: flex;
-  justify-content: right;
+  justify-content: center;
   padding: 1%;
 
 }
@@ -471,7 +471,7 @@ body{
 }
 .log_in_cra ,.forget_password,.log_in_cont{
   display: flex;
-  justify-content: left;
+  justify-content: center;
   padding-top: 5px ;
 }
 .sing_in_img{

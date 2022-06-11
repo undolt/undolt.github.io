@@ -101,7 +101,10 @@ html{
   background-color: var(--nav-color);
   padding: 5px;
   font-size: var(--iconsize);
-  border-radius: 0px 100px 100px 0;
+  border-radius: 50%;
+}
+.dash_icon i:hover{
+   box-shadow: 2px 2px 12px black;
 }
 .dashboard_all{
   width: 100%;
@@ -114,6 +117,7 @@ html{
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 2px 2px 12px black;
 }
 .dashboard_content{
   margin-left: var(--dashbord-nav-len);

@@ -28,7 +28,9 @@
 						<div class="log_out_btn"><i class="bx bx-log-out-circle"></i> Log Out</div>
 					</div>
 				</div>	
-				<div class="dash_icon"><i class="bx bx-fast-forward" id="dash_nav_link" onclick="shift_nav();"></i>
+				<div class="dash_icon">
+					<i class="bx bx-chevrons-right" id="dash_nav_link" onclick="shift_nav();"></i>
+					<!--<i class="bx bx-chevrons-left" id="dash_nav_link_2" onclick="shift_nav();"></i>-->
 				</div>
 			</div>
 			<div class="dashboard_content">
@@ -62,14 +64,24 @@
 </body>
 <script type="text/javascript">
 	let d_width=document.getElementById('all_body_for').offsetWidth;
+	console.log(document.getElementById('dashboard_nav').style.left);
 	function shift_nav(){
 		if(d_width <= 900){
-		document.getElementById('dashboard_nav').style.left='0px';
+			if(document.getElementById('dashboard_nav').style.left =='0px'){
+				document.getElementById('dashboard_nav').style.left='-170px';
+				document.getElementById('dash_nav_link').className='bx bx-chevrons-right';
+			}
+			else{
+				document.getElementById('dashboard_nav').style.left='0px';
+				document.getElementById('dash_nav_link').className='bx bx-chevrons-left';
+			}
+		console.log(document.getElementById('dashboard_nav').style.left);
 		}
 	}
 	function shift_nav_move(){
 		if(d_width <= 900){
 		document.getElementById('dashboard_nav').style.left='-170px';
+		document.getElementById('dash_nav_link').className='bx bx-chevrons-right';
 		}
 	}
 	window.onresize=function(event){
