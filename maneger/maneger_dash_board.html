@@ -3,12 +3,12 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>UnDolt, student dashboard </title>
-	<link rel="stylesheet" type="text/css" href="std_assert/css/std_index.css">
+	<title>UnDolt, maneger dashboard </title>
+	<link rel="stylesheet" type="text/css" href="maneger_assert/css/maneger_index.css">
 	<link rel="stylesheet" type="text/css" href="../assert/boxicons-2.1.2/css/boxicons.min.css">
 	<link rel="stylesheet" type="text/css" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
 </head>
-<body id="all_body_for"  onload='onload_ch();'>
+<body id="all_body_for"onload='onload_ch();'>
 	<div id="loder_set">
 	<div id="loder" >
 		<div></div>
@@ -25,12 +25,11 @@
 	            		<a href="#" class="nav__logo"><span>U</span>n<span>D</span>olt<b>.</b></a>
 					</div>
 					<div class="up_nav">
-						<div class="up_nav_link active" onclick="shift_nav_move();"><i class="bx bx-home"></i><a href="#std_home">Home</a></div>
-						<div class="up_nav_link" onclick="shift_nav_move();"><i class="bx bx-user-circle"></i><a href="#std_profile">Profile</a></div>
-						<div class="up_nav_link" onclick="shift_nav_move();"><i class="bx bx-task"></i><a href="#std_your_tasks">Your Tasks</a></div>
-						<div class="up_nav_link" onclick="shift_nav_move();"><i class="bx bxs-bank"></i><a href="#std_payment">Payment</a></div>
-						<div class="up_nav_link" onclick="shift_nav_move();"><i class="bx bx-error-alt"></i><a href="#std_instraction">Instractions</a></div>
-						<div class="up_nav_link" onclick="shift_nav_move();"><i class="bx bxs-offer"></i><a href="#std_offers">Offers</a></div>
+						<div class="up_nav_link active" onclick="shift_nav_move();"><i class="bx bx-home"></i><a href="#home">Home</a></div>
+						<div class="up_nav_link" onclick="shift_nav_move();"><i class="bx bx-user-circle"></i><a href="#tutors">Tutors</a></div>
+						<div class="up_nav_link" onclick="shift_nav_move();"><i class="bx bx-task"></i><a href="#your_tasks">Your Tasks</a></div>
+						<div class="up_nav_link" onclick="shift_nav_move();"><i class="bx bx-history"></i><a href="#hisrty">History</a></div>
+						<div class="up_nav_link" onclick="shift_nav_move();"><i class="bx bx-message-rounded-dots"></i><a href="#massage">Masseges</a></div>
 					</div>
 					<div class="below_nav">
 						<div class="log_out_btn"><i class="bx bx-log-out-circle"></i> Log Out</div>
@@ -42,28 +41,24 @@
 				</div>
 			</div>
 			<div class="dashboard_content">
-				<div class="stud_sub_con std_home" id="std_home">
+				<div class="stud_sub_con home" id="home">
 					<h1>Home</h1>
 					it is a content for check . we will see it is done by me. Hello it is not for me see tthat  is not ok for me see this is ok or not by the way that  is not eaning less.
 				</div>
-				<div class="stud_sub_con std_profile" id="std_profile">
-					<h1>Profile</h1>
+				<div class="stud_sub_con tutors" id="tutors">
+					<h1>Tutros</h1>
 					it is a content for check . we will see it is done by me. Hello it is not for me see tthat  is not ok for me see this is ok or not by the way that  is not eaning less.
 				</div>
-				<div class="stud_sub_con std_your_tasks" id="std_your_tasks">
+				<div class="stud_sub_con your_tasks" id="your_tasks">
 					<h1>Your Task</h1>
 					it is a content for check . we will see it is done by me. Hello it is not for me see tthat  is not ok for me see this is ok or not by the way that  is not eaning less.
 				</div>
-				<div class="stud_sub_con std_payment" id="std_payment">
-					<h1>Payment</h1>
+				<div class="stud_sub_con history" id="history">
+					<h1>History</h1>
 					it is a content for check . we will see it is done by me. Hello it is not for me see tthat  is not ok for me see this is ok or not by the way that  is not eaning less.
 				</div>
-				<div class="stud_sub_con std_instraction" id="std_instraction">
-					<h1>Instractions</h1>
-					it is a content for check . we will see it is done by me. Hello it is not for me see tthat  is not ok for me see this is ok or not by the way that  is not eaning less.
-				</div>
-				<div class="stud_sub_con std_offers" id="std_offers">
-					<h1> Offers</h1>
+				<div class="stud_sub_con message" id="messages">
+					<h1>Messages</h1>
 					it is a content for check . we will see it is done by me. Hello it is not for me see tthat  is not ok for me see this is ok or not by the way that  is not eaning less.
 				</div>
 			</div>
@@ -79,7 +74,7 @@
 		//alert('your page is loaded');
 		document.getElementById('loder_set').style.display='none';
 	}
-	
+
 	let d_width=document.getElementById('all_body_for').offsetWidth;
 	//alert(d_width);
 	function shift_nav(){

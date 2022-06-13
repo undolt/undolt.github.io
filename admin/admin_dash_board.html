@@ -3,12 +3,12 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>UnDolt, student dashboard </title>
-	<link rel="stylesheet" type="text/css" href="std_assert/css/std_index.css">
+	<title>UnDolt, Admin dashboard </title>
+	<link rel="stylesheet" type="text/css" href="admin_assert/css/admin_index.css">
 	<link rel="stylesheet" type="text/css" href="../assert/boxicons-2.1.2/css/boxicons.min.css">
 	<link rel="stylesheet" type="text/css" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
 </head>
-<body id="all_body_for"  onload='onload_ch();'>
+<body id="all_body_for"onload='onload_ch();'>
 	<div id="loder_set">
 	<div id="loder" >
 		<div></div>
@@ -17,7 +17,7 @@
 		<div></div>
 	</div>
 	</div>
-	<div class="bd-grid">
+	<div class="bd-grid" hidden>
 		<div class="dashboard_all">
 			<div class="dashboard_nav" id="dashboard_nav">
 				<div class="all_nav">
@@ -79,7 +79,7 @@
 		//alert('your page is loaded');
 		document.getElementById('loder_set').style.display='none';
 	}
-	
+
 	let d_width=document.getElementById('all_body_for').offsetWidth;
 	//alert(d_width);
 	function shift_nav(){

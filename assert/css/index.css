@@ -353,7 +353,7 @@ body{
 }
 .footer__reserved{
   color: white;
-  text-align: right;
+  text-align: center;
   padding: 15px 0px 15px 0px;
 }
 .footer__reserved span{
@@ -521,4 +521,53 @@ body{
   .log_in_from .log_input input,.sing_up_from .log_input input{
       width: 95%;
     }
+}
+
+/* css task in sing_up.html*/
+.conformation{
+  background-color:var(--background-color);
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+  justify-items: center;
+}
+.as_position{
+  background-color: white;
+  padding: 35px;
+  border-radius: 5px;
+}
+.as_position:hover{
+  box-shadow: 2px 3px 15px var(--footer-color);
+}
+.as_position .heading{
+  font-size: 25px;
+}
+#as_student,#as_tutor{
+  background-color: var(--nav-color);
+  text-align: center;
+  margin: 5px 0px;
+  border-radius: 5px;
+  border: 1px solid var(--nav-color);
+}
+.hello{
+  padding: 5px;
+}
+.as_position a{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+#as_student:hover,#as_tutor:hover{
+  background-color: white;
+}
+#as_student:hover a,#as_tutor:hover a{
+  color: var(--nav-color);
+}
+
+.for_student,.for_tutor{
+  display: none;
 }

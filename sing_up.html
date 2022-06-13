@@ -1,0 +1,153 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>UnDolt, Update Your Profile</title>
+	<link rel="stylesheet" type="text/css" href="assert/css/index.css">
+</head>
+<body onload='onload_ch();'>
+	<div id="loder_set">
+	<div id="loder" >
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+	</div>
+	<div class="all_complete">
+		<div class="conformation" id="conformation">
+			<div class="as_position">
+				<div class="heading">Complete profile as </div>
+				<div class="option_for" id="as_student"><a href="#" onclick="add_student();" ><div class="hello">Student</div></a></div>
+				<div class="option_for" id="as_tutor" ><a href="#" onclick="add_tutor();" ><div class="hello">Tutor</div></a></div>
+			</div>
+		</div>
+		<div class="for_student" id="for_student">
+			<h1>For student</h1>
+			<div>
+				<form>
+					<div class="right_from">
+						<div>
+							<div><label></label></div>
+							<div><input type="" name=""></div>
+						</div>
+						<div>
+							<div><label></label></div>
+							<div><input type="" name=""></div>
+						</div>
+						<div>
+							<div><label></label></div>
+							<div><input type="" name=""></div>
+						</div>
+						<div>
+							<div><label></label></div>
+							<div><input type="" name=""></div>
+						</div>
+						<div>
+							<div><label></label></div>
+							<div><input type="" name=""></div>
+						</div>
+					</div>
+					<div class="left_from">
+						<div>
+							<div><label></label></div>
+							<div><input type="" name=""></div>
+						</div><div>
+							<div><label></label></div>
+							<div><input type="" name=""></div>
+						</div><div>
+							<div><label></label></div>
+							<div><input type="" name=""></div>
+						</div><div>
+							<div><label></label></div>
+							<div><input type="" name=""></div>
+						</div><div>
+							<div><label></label></div>
+							<div><input type="" name=""></div>
+						</div><div>
+							<div><label></label></div>
+							<div><input type="" name=""></div>
+						</div><div>
+							<div><label></label></div>
+							<div><input type="" name=""></div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="for_tutor" id="for_tutor">
+			<h1>For Tutor</h1>
+			<div>
+				<form>
+					<div class="right_from">
+						<div>
+							<div><label></label></div>
+							<div><input type="" name=""></div>
+						</div>
+						<div>
+							<div><label></label></div>
+							<div><input type="" name=""></div>
+						</div>
+						<div>
+							<div><label></label></div>
+							<div><input type="" name=""></div>
+						</div>
+						<div>
+							<div><label></label></div>
+							<div><input type="" name=""></div>
+						</div>
+						<div>
+							<div><label></label></div>
+							<div><input type="" name=""></div>
+						</div>
+					</div>
+					<div class="left_from">
+						<div>
+							<div><label></label></div>
+							<div><input type="" name=""></div>
+						</div><div>
+							<div><label></label></div>
+							<div><input type="" name=""></div>
+						</div><div>
+							<div><label></label></div>
+							<div><input type="" name=""></div>
+						</div><div>
+							<div><label></label></div>
+							<div><input type="" name=""></div>
+						</div><div>
+							<div><label></label></div>
+							<div><input type="" name=""></div>
+						</div><div>
+							<div><label></label></div>
+							<div><input type="" name=""></div>
+						</div><div>
+							<div><label></label></div>
+							<div><input type="" name=""></div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	function sleep(ms){
+		return new Promise(resolve => setTimeout(resolve,ms));
+	}
+	async function onload_ch(){
+		await sleep(2000);
+		//alert('your page is loaded');
+		document.getElementById('loder_set').style.display='none';
+	}
+
+	function add_tutor(){
+		document.getElementById('conformation').style.display='none';
+		document.getElementById('for_tutor').style.display='block';
+	}
+	function add_student(){
+		document.getElementById('conformation').style.display='none';
+		document.getElementById('for_student').style.display='block';
+	}
+</script>
+</html>
