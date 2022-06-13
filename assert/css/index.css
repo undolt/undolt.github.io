@@ -402,9 +402,12 @@ body{
   font-size: 25px;
 }
 .log_in_from .nav_logo_div,.sing_up_from .nav_logo_div{
-  padding: 10px;
+  padding: 10px 0px;
   display: flex;
   justify-content: center;
+}
+.log_in_from .nav__logo{
+  text-align: center;
 }
 .log_in_input{
   display: flex;
@@ -453,15 +456,19 @@ body{
 
 }
 .log_in_submit .submit_btn{
+  outline: none;
+  border: none;
+}
+.log_in_submit .submit_btn a{
   padding: 5px 10px;
   color: var(--nav-color);
-  outline: none;
   font-size: var(--normal-font-size);
   border: 1px solid var(--nav-color);
   font-weight: 500;
   border-radius: 5px;
+  text-decoration: none;
 }
-.log_in_submit .submit_btn:hover{
+.log_in_submit .submit_btn:hover a{
   color: white;
   background-color: var(--nav-color);
   outline: none;
