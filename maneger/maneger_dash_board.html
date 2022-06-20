@@ -4,19 +4,12 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>UnDolt, maneger dashboard </title>
+	<link rel="stylesheet" type="text/css" href="../assert/css/main.css">
 	<link rel="stylesheet" type="text/css" href="maneger_assert/css/maneger_index.css">
 	<link rel="stylesheet" type="text/css" href="../assert/boxicons-2.1.2/css/boxicons.min.css">
 	<link rel="stylesheet" type="text/css" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
 </head>
-<body id="all_body_for"onload='onload_ch();'>
-	<div id="loder_set">
-	<div id="loder" >
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
-	</div>
-	</div>
+<body id="all_body_for">
 	<div class="bd-grid">
 		<div class="dashboard_all">
 			<div class="dashboard_nav" id="dashboard_nav">
@@ -32,7 +25,7 @@
 						<div class="up_nav_link" onclick="shift_nav_move();"><i class="bx bx-message-rounded-dots"></i><a href="#massage">Masseges</a></div>
 					</div>
 					<div class="below_nav">
-						<div class="log_out_btn"><i class="bx bx-log-out-circle"></i> Log Out</div>
+						<div class="log_out_btn" onclick="log_out_fn();"><i class="bx bx-log-out-circle"></i> Log Out</div>
 					</div>
 				</div>	
 				<div class="dash_icon">
@@ -66,13 +59,8 @@
 	</div>
 </body>
 <script type="text/javascript">
-	function sleep(ms){
-		return new Promise(resolve => setTimeout(resolve,ms));
-	}
-	async function onload_ch(){
-		await sleep(2000);
-		//alert('your page is loaded');
-		document.getElementById('loder_set').style.display='none';
+	function log_out_fn(){
+		window.location.href='../log_in.html';
 	}
 
 	let d_width=document.getElementById('all_body_for').offsetWidth;

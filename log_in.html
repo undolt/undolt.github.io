@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>UnDolt , Log In Pages</title>
+	<link rel="stylesheet" type="text/css" href="assert/css/main.css">
 	<link rel="stylesheet" type="text/css" href="assert/css/index.css">
 </head>
 <body onload='onload_ch();'>
@@ -39,7 +40,7 @@
 						<div class="log_input"><input type="password" name="password" required></div>
 					</div>
 					<div>
-						<div class="log_in_submit"><button class="submit_btn" type="submit"><a href="sing_up.html">Sign Up</button></a></div>
+						<div class="log_in_submit"><button class="submit_btn" type="submit" onclick="sing_up_page();">Sign Up</button></div>
 						<!-- For this there are need to change in css. and need to remove a tag-->
 					</div>
 				</form>
@@ -66,12 +67,12 @@
 						<div class="log_input"><input type="password" name="password" required></div>
 					</div>
 					<div>
-						<div class="log_in_submit"><button class="submit_btn" type="submit"><a href="sing_in.html">Sign In</a></button></div>
+						<div class="log_in_submit"><button class="submit_btn"  onclick="log_in_page();">Sign In</button></div>
 						<!-- For this there are need to change in css-->
 					</div>
 				</form>
 				<div class="log_in_cra">
-					Don't have an Account? <a id="sing_up_btn" href="#sing_up" onclick="change_state_1();"> Sign Up</a>
+					Don't have an Account? <a id="sing_up_btn" onclick="change_state_1();"> Sign Up</a>
 				</div>
 				<div class="forget_password">
 					<a href="#">Forget password?</a>
@@ -81,6 +82,12 @@
 	</div>
 </body>
 <script type="text/javascript">
+	function log_in_page(){
+		window.location.href='sing_in.html';
+	}
+	function sing_up_page(){
+		window.location.href='sing_up.html';
+	}
 	function sleep(ms){
 		return new Promise(resolve => setTimeout(resolve,ms));
 	}

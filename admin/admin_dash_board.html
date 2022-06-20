@@ -8,15 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="../assert/boxicons-2.1.2/css/boxicons.min.css">
 	<link rel="stylesheet" type="text/css" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
 </head>
-<body id="all_body_for"onload='onload_ch();'>
-	<div id="loder_set">
-	<div id="loder" >
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
-	</div>
-	</div>
+<body id="all_body_for">
 	<div class="bd-grid" hidden>
 		<div class="dashboard_all">
 			<div class="dashboard_nav" id="dashboard_nav">
@@ -33,12 +25,11 @@
 						<div class="up_nav_link" onclick="shift_nav_move();"><i class="bx bxs-offer"></i><a href="#std_offers">Offers</a></div>
 					</div>
 					<div class="below_nav">
-						<div class="log_out_btn"><i class="bx bx-log-out-circle"></i> Log Out</div>
+						<div class="log_out_btn" onclick="log_out_fn();"><i class="bx bx-log-out-circle"></i> Log Out</div>
 					</div>
 				</div>	
 				<div class="dash_icon">
 					<i class="bx bx-chevrons-right" id="dash_nav_link" onclick="shift_nav();"></i>
-					<!--<i class="bx bx-chevrons-left" id="dash_nav_link_2" onclick="shift_nav();"></i>-->
 				</div>
 			</div>
 			<div class="dashboard_content">
@@ -71,13 +62,8 @@
 	</div>
 </body>
 <script type="text/javascript">
-	function sleep(ms){
-		return new Promise(resolve => setTimeout(resolve,ms));
-	}
-	async function onload_ch(){
-		await sleep(2000);
-		//alert('your page is loaded');
-		document.getElementById('loder_set').style.display='none';
+	function log_out_fn(){
+		window.location.href='../log_in.html';
 	}
 
 	let d_width=document.getElementById('all_body_for').offsetWidth;
