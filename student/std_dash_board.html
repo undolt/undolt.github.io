@@ -20,10 +20,8 @@
 					<div class="up_nav">
 						<div class="up_nav_link active" onclick="shift_nav_move();"><i class="bx bx-home"></i><a href="#std_home">Home</a></div>
 						<div class="up_nav_link" onclick="shift_nav_move();"><i class="bx bx-user-circle"></i><a href="#std_profile">Profile</a></div>
-						<div class="up_nav_link" onclick="shift_nav_move();"><i class="bx bx-task"></i><a href="#std_your_tasks">Your Tasks</a></div>
-						<div class="up_nav_link" onclick="shift_nav_move();"><i class="bx bxs-bank"></i><a href="#std_payment">Payment</a></div>
+						<div class="up_nav_link" onclick="shift_nav_move();"><i class="bx bx-task"></i><a href="#std_your_tasks">Tasks</a></div>
 						<div class="up_nav_link" onclick="shift_nav_move();"><i class="bx bx-error-alt"></i><a href="#std_instraction">Instractions</a></div>
-						<div class="up_nav_link" onclick="shift_nav_move();"><i class="bx bxs-offer"></i><a href="#std_offers">Offers</a></div>
 					</div>
 					<div class="below_nav">
 						<div class="log_out_btn" onclick="log_out_fn();" ><i class="bx bx-log-out-circle"></i> Log Out</div>
@@ -36,27 +34,148 @@
 			</div>
 			<div class="dashboard_content">
 				<div class="stud_sub_con std_home" id="std_home">
-					<h1>Home</h1>
-					it is a content for check . we will see it is done by me. Hello it is not for me see tthat  is not ok for me see this is ok or not by the way that  is not eaning less.
+					<form method="post" action="" class="upload_from">
+						<div class="upload_data">
+							<div class="upload_heading">Upload Your Question Here</div>
+							<div class="div_sub_type">
+								<select class="sub_type" name="sub_name">
+									<option>Select Subject</option>
+									<option>Mathematics</option>
+									<option>Physics</option>
+									<option>Chemistry</option>
+									<option>Projects</option>
+									<option>Data Science</option>
+									<option>Others</option>
+								</select>
+							</div>
+							<div  id="file_for_upload">
+								<label for="file" class="file_for_upload">
+									<i class="bx bx-upload"></i>Browse Files
+								</label>
+								<input type="file" name="the_file" id="file" class="input_file" multiple hidden>
+							</div>
+							<div class="div_submit_btn">
+								<input type="submit" value="Get Solution" name="Sub_btn" class="sub_upload_btn">
+							</div>
+						</div>
+					</form>
+					<div class="std_statistic">
+						<a href="#recent_task">
+						<div class="div_stat">
+							<div class="stat_no" >15</div>
+							<div>Tasks</div>
+						</div>
+						</a>
+						<a href="#recent_task">
+						<div class="div_stat">
+							<div class="stat_no">12</div>
+							<div>Complete Tasks</div>
+						</div>
+						</a>
+						<a href="#old_task">
+						<div class="div_stat">
+							<div class="stat_no">3</div>
+							<div>Pending</div>
+						</div>
+					</div>
 				</div>
 				<div class="stud_sub_con std_profile" id="std_profile">
-					<h1>Profile</h1>
-					it is a content for check . we will see it is done by me. Hello it is not for me see tthat  is not ok for me see this is ok or not by the way that  is not eaning less.
+					<div class="std_profile_div">
+					 <div>
+					 	<div class="prof_pic"></div>
+					 	<div class="std_edit"><a href="#"><i class="bx bxs-edit"></i>Edit Profile</a></div>
+					 </div>
+					 
+					 <div class="prof_details">
+					 	<div class="prof_name sub_details"> Full Name . 
+					 		<div class="main_details" > Abhijit Gayen </div>
+					 	</div>
+					 	<div class="std_contact_no sub_details"> Contact No . 
+					 		<div class="main_details"> 7044136740</div>
+					 	</div>
+					 	<div class="contact_details sub_details">Address .
+					 		<div class="main_details">
+					 		Vill - Subhasnagar
+					 		<br>
+					 		P.O - Chapla
+					 		<br>
+					 		P.S - Raidighi
+					 		<br>
+					 		Dist- South 24 PGS
+					 		<br>
+					 		State - West Bengal
+					 		<br>
+					 		Country - India
+					 		<br>
+					 		Pin - 743349  
+					 		</div> 
+					 	</div>
+					 </div>
+					</div>
 				</div>
 				<div class="stud_sub_con std_your_tasks" id="std_your_tasks">
-					<h1>Your Task</h1>
-					it is a content for check . we will see it is done by me. Hello it is not for me see tthat  is not ok for me see this is ok or not by the way that  is not eaning less.
-				</div>
-				<div class="stud_sub_con std_payment" id="std_payment">
-					<h1>Payment</h1>
-					it is a content for check . we will see it is done by me. Hello it is not for me see tthat  is not ok for me see this is ok or not by the way that  is not eaning less.
+					<h2>Recent Tasks</h2>
+					<div class="recent_task_div" id="recent_task"><h3>Task_1</h3>
+						<div class="recent_task">
+							<div>Ass_no</div>
+							<div>500</div>
+							<div>deadline</div>
+							<div>Status</div>
+							<div class="details_btn">Details</div>
+						</div>
+					</div>
+					<div class="recent_task_div"><h3>Task_2</h3>
+						<div class="recent_task">
+							<div>Ass_no</div>
+							<div>300</div>
+							<div>deadline</div>
+							<div>Status</div>
+							<div class="details_btn">Details</div>
+						</div>
+					</div>
+					<div class="recent_task_div"><h3>Task_3</h3>
+						<div class="recent_task">
+							<div>Ass_no</div>
+							<div>300</div>
+							<div>deadline</div>
+							<div>Status</div>
+							<div class="details_btn">Details</div>
+						</div>
+					</div>
+
+
+					<h2>Old Tasks</h2>
+					<div class="old_task_div" id="old_task" ><h3>Task_15</h3>
+						<div class="old_task">
+							<div>Ass_no</div>
+							<div>600</div>
+							<div class="solution_btn">Solution</div>
+						</div>
+					</div>
+					<div class="old_task_div"><h3>Task_14</h3>
+						<div class="old_task">
+							<div>Ass_no</div>
+							<div>200</div>
+							<div class="solution_btn">Solution</div>
+						</div>
+					</div>
+					<div class="old_task_div"><h3>Task_13</h3>
+						<div class="old_task">
+							<div>Ass_no</div>
+							<div>2000</div>
+							<div class="solution_btn">Solution</div>
+						</div>
+					</div>
+					<div class="old_task_div"><h3>Task_12</h3>
+						<div class="old_task">
+							<div>Ass_no</div>
+							<div>1200</div>
+							<div class="solution_btn">Solution</div>
+						</div>
+					</div>
 				</div>
 				<div class="stud_sub_con std_instraction" id="std_instraction">
 					<h1>Instractions</h1>
-					it is a content for check . we will see it is done by me. Hello it is not for me see tthat  is not ok for me see this is ok or not by the way that  is not eaning less.
-				</div>
-				<div class="stud_sub_con std_offers" id="std_offers">
-					<h1> Offers</h1>
 					it is a content for check . we will see it is done by me. Hello it is not for me see tthat  is not ok for me see this is ok or not by the way that  is not eaning less.
 				</div>
 			</div>
