@@ -36,26 +36,67 @@
 					<form method="post" action="" class="upload_from">
 						<div class="upload_data">
 							<div class="upload_heading"> Hi ! , std_name<br>
-							Upload Your Question Here</div>
-							<div class="div_sub_type">
-								<select class="sub_type" name="sub_name">
-									<option>Select Subject</option>
-									<option>Mathematics</option>
-									<option>Physics</option>
-									<option>Chemistry</option>
-									<option>Projects</option>
-									<option>Data Science</option>
-									<option>Others</option>
-								</select>
+								Fill the details of your task.
 							</div>
-							<div  id="file_for_upload">
+							<div class="div_upload">
+								<div class="sub_type_sp" id="sub_name">
+									<div class="for_label">
+										<label for="sub_name">
+											Select Subject Name
+										</label>
+									</div>
+									<div class="div_select">
+										<select  name="sub_name" class="sub_type"  onchange="other_sub(this);">
+											<option>Select Subject</option>
+											<option>Mathematics</option>
+											<option>Physics</option>
+											<option>Chemistry</option>
+											<option>Projects</option>
+											<option>Data Science</option>
+											<option>Others</option>
+										</select>
+									</div>
+								</div>
+								<div id="div_other" class="div_other" style="display: none;">
+									<div class="for_label">
+									 	<label for="sub_name">
+										 	Enter Subject Name
+									 	</label>
+									</div>
+									<div>
+										<input type="text" class="sub_type" name="sub_name_other" placeholder="">
+									</div>
+								</div>
+							</div>
+							<div class="div_upload">
+								<div class="for_label">
+									<label>Enter Topic Name </label>
+								</div>
+								<div>
+									<input type="text" class="sub_type" name="topic_name">
+							    </div>
+							</div>
+							<div  id="file_for_upload" class="div_upload">
 								<label for="file" class="file_for_upload">
-									<i class="bx bx-upload"></i>Browse Files
+									<div>
+										<i class="bx bx-upload"></i>
+									</div>
+									<div>
+										Upload Files related to the task.
+									</div>
 								</label>
 								<input type="file" name="the_file" id="file" class="input_file" multiple hidden>
 							</div>
+							<div class="">
+								<div class="for_label">
+									<label>Any Other information</label>
+								</div>
+								<div>
+									<textarea name=" " id="" class="enter_content sub_type"></textarea>
+								</div>
+							</div>
 							<div class="div_submit_btn">
-								<input type="submit" value="Get Solution" name="Sub_btn" class="sub_upload_btn">
+								<input type="submit" value="Submit Details" name="Sub_btn" class="sub_upload_btn">
 							</div>
 						</div>
 					</form>
@@ -144,6 +185,7 @@
 						<div class="old_task">
 							<div>Ass_no</div>
 							<div>600</div>
+							<div>Subject</div>
 							<div class="solution_btn">Solution</div>
 						</div>
 					</div>
@@ -151,6 +193,7 @@
 						<div class="old_task">
 							<div>Ass_no</div>
 							<div>200</div>
+							<div>Subject</div>
 							<div class="solution_btn">Solution</div>
 						</div>
 					</div>
@@ -158,6 +201,7 @@
 						<div class="old_task">
 							<div>Ass_no</div>
 							<div>2000</div>
+							<div>Subject</div>
 							<div class="solution_btn">Solution</div>
 						</div>
 					</div>
@@ -165,6 +209,7 @@
 						<div class="old_task">
 							<div>Ass_no</div>
 							<div>1200</div>
+							<div>Subject</div>
 							<div class="solution_btn">Solution</div>
 						</div>
 					</div>
@@ -206,7 +251,16 @@
 	 	for_instraction.style.display='none';
 	 	for_your_tasks.style.display='none';
 	 }
-
+	 function other_sub(elem){
+	 	console.log(elem.selectedIndex);
+	 	if(elem.selectedIndex==6){
+	 		document.getElementById('div_other').style.display='block';
+	 		document.getElementById('sub_name').style.display='none';
+	 	}
+	 	else{
+	 		document.getElementById('div_other').style.display = 'none';
+	 	}
+	 }
 
 
 	function log_out_fn(){
