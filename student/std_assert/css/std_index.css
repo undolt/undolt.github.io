@@ -4,6 +4,11 @@
 }
 html{
   scroll-behavior: smooth;
+  background-color: rgba(0, 0, 0, 0.15);
+  background-image: url('../../../assert/img/exam.svg');
+  background-repeat: no-repeat;
+  background-size: 55%;
+  background-position: right bottom;
 }
 .bd-grid{
   max-width: 1024px;
@@ -136,6 +141,8 @@ html{
   width: 80%;
   margin: 10px auto;
   background-color: white;
+  border-radius: 5px;
+  box-shadow: 2px 3px 16px lightslategray;
 }
 .upload_from:after{
   content: '';
@@ -151,7 +158,7 @@ html{
 }
 .upload_heading{
   text-align: center;
-  color: white;
+  color: var(--nav-color);
   font-size: 23px;
   text-align: center;
   text-shadow:1px 1px 0px var(--nav-color);
@@ -238,7 +245,8 @@ html{
 /*all about std profile*/
 .std_profile_div{
   border-radius: 5px;
-  background-image: linear-gradient(270deg,lightgray,lightsteelblue,var(--nav-color));
+  background-color: white;
+  /*background-image: linear-gradient(270deg,lightgray,lightsteelblue,var(--nav-color));*/
   width: 90%;
   height: 250px;
   margin: 25px auto;
@@ -255,9 +263,14 @@ html{
   min-width: auto;
 }
 .prof_pic{
-  background-color: white;
+  color: lightgray;
   width: 9rem;
   height: 9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 130px;
+  border: 1px solid var(--nav-color);
 }
 .sub_details{
   display:flex;
@@ -274,20 +287,19 @@ html{
   padding: 5px;
   border-radius: 5px;
   text-align: center;
-  border: 1px solid white;
+  border: 1px solid var(--nav-color);
 }
 .std_edit a{
-  color: white;
+  color: var(--nav-color);
   font-weight: 700;
   font-size: var(--normal-font-size);
   text-decoration: none;
 }
 .std_edit:hover{
-  background-color: white;
-  border: 1px solid var(--nav-color);
+  background-color: var(--nav-color);
 }
 .std_edit:hover a{
-  color: var(--nav-color);
+  color: white;
 }
 .std_edit .bxs-edit{
   padding: 2px;

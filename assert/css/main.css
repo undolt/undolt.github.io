@@ -10,7 +10,7 @@
 :root{
   --footer-color: rgba(1,1,1,0.7);
   --nav-color: rgba(0,0,205,1);
-  --light-nav-color:  rgba(125, 220, 235, 3.09);
+  --light-nav-color: white;
   --box-shadow-color:rgba(12, 9, 8, 0.277);
   --sub-background-color:rgba(226, 187, 14, 0.527);
   --background-color:rgba(198, 225, 223,1);
