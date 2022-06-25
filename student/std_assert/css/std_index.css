@@ -368,6 +368,10 @@ input,textarea,select{
   }
 }
 @media screen and (max-width: 520px){
+ html{
+  background-size: 55%;
+  background-position: right;
+}
   .upload_from{
     width: 95%;
   }
