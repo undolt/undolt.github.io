@@ -18,10 +18,10 @@
 	            		<a href="#" class="nav__logo"><span>U</span>n<span>D</span>olt<b>.</b></a>
 					</div>
 					<div class="up_nav">
-						<div class="up_nav_link active" onclick="shift_nav_move();"><i class="bx bx-home"></i><a href="#std_home">Home</a></div>
-						<div class="up_nav_link" onclick="shift_nav_move();"><i class="bx bx-user-circle"></i><a href="#std_profile">Profile</a></div>
-						<div class="up_nav_link" onclick="shift_nav_move();"><i class="bx bx-task"></i><a href="#std_your_tasks">Tasks</a></div>
-						<div class="up_nav_link" onclick="shift_nav_move();"><i class="bx bx-error-alt"></i><a href="#std_instraction">Instractions</a></div>
+						<div class="up_nav_link active" onclick="shift_nav_move(); active_home();"><i class="bx bx-home"></i><a href="#std_home">Home</a></div>
+						<div class="up_nav_link" onclick="shift_nav_move(); active_profile();"><i class="bx bx-user-circle"></i><a href="#std_profile">Profile</a></div>
+						<div class="up_nav_link" onclick="shift_nav_move(); active_your_tasks();"><i class="bx bx-task"></i><a href="#std_your_tasks">Tasks</a></div>
+						<div class="up_nav_link" onclick="shift_nav_move(); active_instraction();"><i class="bx bx-error-alt"></i><a href="#std_instraction">Instractions</a></div>
 					</div>
 					<div class="below_nav">
 						<div class="log_out_btn" onclick="log_out_fn();" ><i class="bx bx-log-out-circle"></i> Log Out</div>
@@ -29,7 +29,6 @@
 				</div>	
 				<div class="dash_icon">
 					<i class="bx bx-chevrons-right" id="dash_nav_link" onclick="shift_nav();"></i>
-					<!--<i class="bx bx-chevrons-left" id="dash_nav_link_2" onclick="shift_nav();"></i>-->
 				</div>
 			</div>
 			<div class="dashboard_content">
@@ -60,26 +59,21 @@
 						</div>
 					</form>
 					<div class="std_statistic">
-						<a href="#recent_task">
-						<div class="div_stat">
+						<div class="div_stat" onclick="active_your_tasks();">
 							<div class="stat_no" >15</div>
 							<div>Tasks</div>
 						</div>
-						</a>
-						<a href="#recent_task">
-						<div class="div_stat">
+						<div class="div_stat" onclick="active_your_tasks();">
 							<div class="stat_no">12</div>
 							<div>Complete Tasks</div>
 						</div>
-						</a>
-						<a href="#old_task">
-						<div class="div_stat">
+						<div class="div_stat" onclick="active_your_tasks();">
 							<div class="stat_no">3</div>
 							<div>Pending</div>
 						</div>
 					</div>
 				</div>
-				<div class="stud_sub_con std_profile" id="std_profile">
+				<div class="stud_sub_con std_profile" id="std_profile" hidden>
 					<div class="std_profile_div">
 					 <div>
 					 	<div class="prof_pic"></div>
@@ -113,7 +107,7 @@
 					 </div>
 					</div>
 				</div>
-				<div class="stud_sub_con std_your_tasks" id="std_your_tasks">
+				<div class="stud_sub_con std_your_tasks" id="std_your_tasks" hidden>
 					<h2>Recent Tasks</h2>
 					<div class="recent_task_div" id="recent_task"><h3>Task_1</h3>
 						<div class="recent_task">
@@ -174,7 +168,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="stud_sub_con std_instraction" id="std_instraction">
+				<div class="stud_sub_con std_instraction" id="std_instraction" hidden>
 					<h1>Instractions</h1>
 					it is a content for check . we will see it is done by me. Hello it is not for me see tthat  is not ok for me see this is ok or not by the way that  is not eaning less.
 				</div>
@@ -183,13 +177,44 @@
 	</div>
 </body>
 <script type="text/javascript">
+	let for_home=document.getElementById('std_home');
+	let for_profile=document.getElementById('std_profile');
+	let for_your_tasks=document.getElementById('std_your_tasks');
+	let for_instraction=document.getElementById('std_instraction');
+	 function active_profile(){
+		for_home.style.display='none';
+	 	for_profile.style.display='block';
+	 	for_instraction.style.display='none';
+	 	for_your_tasks.style.display='none';
+	 }
+	  function active_instraction(){
+	 	for_home.style.display='none';
+	 	for_profile.style.display='none';
+	 	for_instraction.style.display='block';
+	 	for_your_tasks.style.display='none';
+	 }
+	  function active_your_tasks(){
+	 	for_home.style.display='none';
+	 	for_profile.style.display='none';
+	 	for_instraction.style.display='none';
+	 	for_your_tasks.style.display='block';
+	 }
+	  function active_home(){
+	 	for_home.style.display='block';
+	 	for_profile.style.display='none';
+	 	for_instraction.style.display='none';
+	 	for_your_tasks.style.display='none';
+	 }
+
+
+
 	function log_out_fn(){
 		window.location.href='../log_in.html';
 	}
 	let d_width=document.getElementById('all_body_for').offsetWidth;
 	//alert(d_width);
 	function shift_nav(){
-		if(d_width <= 900){
+		if(d_width <= 800){
 			if(document.getElementById('dashboard_nav').style.left =='0px'){
 				document.getElementById('dashboard_nav').style.left='-170px';
 				document.getElementById('dash_nav_link').className='bx bx-chevrons-right';
@@ -202,7 +227,7 @@
 		}
 	}
 	function shift_nav_move(){
-		if(d_width <= 900){
+		if(d_width <= 800){
 		document.getElementById('dashboard_nav').style.left='-170px';
 		document.getElementById('dash_nav_link').className='bx bx-chevrons-right';
 		}
