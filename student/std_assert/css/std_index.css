@@ -504,17 +504,26 @@ input,textarea,select{
   background-color: white;
   color: var(--nav-color);
 }
-@media screen and (min-width: 400px){
-  .upload_from{
-    background-image: url('../../../assert/img/reading_book.svg');
-    background-repeat: no-repeat;
-    background-size: 50%;
-    background-position: right bottom;
-    background-attachment: fixed;
+
+.upload_from{
+  background-image: url('../../../assert/img/reading_book.svg');
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: right bottom;
+  background-attachment: scroll;
+}
+@media screen and (max-width: 500px){
+  .bd-grid{
+    width: 100%;
+  }
+  .stud_sub_con{
+    width: 100%;
+  }
+  .std_profile_div{
+    width: 100%;
+    margin: 0px;
   }
 }
-
-
 
 @media screen and (max-width: 700px){
   .std_profile_div{
