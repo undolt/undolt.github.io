@@ -115,10 +115,11 @@ html{
   .nav_rest{
     position: fixed;
     top: var(--header-height);
-    left: -100%;
+    top: -100%;
     width: 100%;
     background-color: #fff;
     transition: .5s;
+    z-index: -1000;
   }
   .up_nav{
    display: flex;
@@ -133,7 +134,7 @@ html{
 }
 
 .show{
-  left: 0px;
+  top: 8vh;
 }
 .dashboard_content{
   margin: 0px;
@@ -349,7 +350,7 @@ input,textarea,select{
   margin-bottom:6px ;
 }
 .main_details{
-  width: 65%;
+  width: 60%;
   color: var(--nav-color);
   display: flex;
   justify-content: space-between;
@@ -395,56 +396,6 @@ input,textarea,select{
     width: 92%;
   }
 }
-/*@media screen and (max-width: 920px) and min-width(520px){
-  .sub_type{
-    width: 70%
-  }
-  .upload_from{
-    width: 90%;
-  }
-  #file_for_upload{
-    width: 70%;
-  }
-  .div_stat{
-    width: 80px;
-    height: 80px;
-    padding: 1px;
-  }
-  .stat_no{
-    font-size: 30px;
-  }
-  .std_profile_div{
-    padding-top:15px ;
-    flex-direction: column;
-    min-height: 550px;
-  }
-  .prof_details{
-    width: 80%;
-    margin: auto;
-  }
-  .main_details{
-    width: 60%;
-  }
-}
-@media screen and (max-width: 520px){
-  .upload_from{
-    width: 95%;
-  }
-  .std_profile_div{
-    padding-top:15px ;
-    width: 95%;
-    flex-direction: column;
-    min-height: 450px;
-  }
-  .prof_details{
-    width: 95%;
-    margin: auto;
-  }
-  .main_details{
-    width: 60%;
-  }
-}*/
-
 /*All about tasks*/
 .completed_task_head,.recent_task_head{
   display: flex;
@@ -499,7 +450,7 @@ input,textarea,select{
     width: 100%;
   }
   .stud_sub_con{
-    width: 100%;
+    /*width: 100%;*/
   }
   .std_profile_div{
     width: 100%;
@@ -519,6 +470,9 @@ input,textarea,select{
   }
   .prof_details{
     width: 90%;
+  }
+  .main_details{
+    width: 60%;
   }
 }
 @media screen and (max-width: 900px){
