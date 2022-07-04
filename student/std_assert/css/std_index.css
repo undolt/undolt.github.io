@@ -89,6 +89,7 @@ html{
 
   .dashboard_content{
     width: 100%;
+    margin: 0px;
   }
   .dashboard_nav{
     width: 100%;
@@ -133,6 +134,10 @@ html{
 
 .show{
   left: 0px;
+}
+.dashboard_content{
+  margin: 0px;
+  width: 100%;
 }
 @media  screen and (min-width: 900px){
   .dashboard_nav{
@@ -352,30 +357,7 @@ input,textarea,select{
 .main_details input{
   border: none;
 }
-.std_edit{
-  margin: 10px auto;
-  width: 80%;
-  padding: 5px;
-  border-radius: 5px;
-  text-align: center;
-  border: 1px solid var(--nav-color);
-}
-.std_edit a{
-  color: var(--nav-color);
-  font-weight: 700;
-  font-size: var(--normal-font-size);
-  text-decoration: none;
-}
-.std_edit:hover{
-  background-color: var(--nav-color);
-}
-.std_edit:hover a{
-  color: white;
-}
-.std_edit .bxs-edit{
-  padding: 2px;
-  font-size: 19px;
-}
+ 
 .profile_btns{
   display: flex;
   justify-content: space-between;
@@ -512,7 +494,7 @@ input,textarea,select{
   background-position: right bottom;
   background-attachment: scroll;
 }
-@media screen and (max-width: 500px){
+@media screen and (max-width: 600px){
   .bd-grid{
     width: 100%;
   }
