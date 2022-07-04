@@ -15,21 +15,25 @@
 			<div class="dashboard_nav" id="dashboard_nav">
 				<div class="all_nav">
 					<div class="nav_logo_div">
-	            		<a href="#" class="nav__logo"><span>U</span>n<span>D</span>olt<b>.</b></a>
+						<div>
+	            			<a href="#" class="nav__logo"><span>U</span>n<span>D</span>olt<b>.</b></a>
+						</div>
+	            		<div class="nav__toggle" id="nav-toggle">
+              				<i class='bx bx-menu' id="nav_toggle_set"></i>
+            			</div>
 					</div>
-					<div class="up_nav">
-						<div class="up_nav_link active" onclick="shift_nav_move(); active_home();"><i class="bx bx-home"></i><a href="#std_home">Home</a></div>
-						<div class="up_nav_link" onclick="shift_nav_move(); active_profile();"><i class="bx bx-user-circle"></i><a href="#std_profile">Profile</a></div>
-						<div class="up_nav_link" onclick="shift_nav_move(); active_your_tasks();"><i class="bx bx-task"></i><a href="#std_your_tasks">Tasks</a></div>
-						<div class="up_nav_link" onclick="shift_nav_move(); active_instraction();"><i class="bx bx-error-alt"></i><a href="#std_instraction">Instractions</a></div>
+					<div  class="nav_rest" id="nav_rest">
+					<div class="up_nav" id="up_nav">
+						<div class="up_nav_link" onclick="active_home();"><i class="bx bx-home"></i><a>Home</a></div>
+						<div class="up_nav_link" onclick="active_profile();"><i class="bx bx-user-circle"></i><a>Profile</a></div>
+						<div class="up_nav_link" onclick="active_your_tasks();"><i class="bx bx-task"></i><a>Tasks</a></div>
+						<div class="up_nav_link" onclick="active_instraction();"><i class="bx bx-error-alt"></i><a>Instractions</a></div>
 					</div>
-					<div class="below_nav">
+					<div class="below_nav" id="low_nav">
 						<div class="log_out_btn" onclick="log_out_fn();" ><i class="bx bx-log-out-circle"></i> Log Out</div>
 					</div>
+					</div>
 				</div>	
-				<div class="dash_icon">
-					<i class="bx bx-chevrons-right" id="dash_nav_link" onclick="shift_nav();"></i>
-				</div>
 			</div>
 			<div class="dashboard_content">
 				<div class="stud_sub_con std_home" id="std_home">
@@ -116,100 +120,174 @@
 					</div>
 				</div>
 				<div class="stud_sub_con std_profile" id="std_profile" hidden>
+					<form method="get">
 					<div class="std_profile_div">
-					 <div>
+					 <div class="prof_pic_div">
 					 	<div class="prof_pic"><i class="bx bxs-user"></i></div>
-					 	<div class="std_edit"><a href="#"><i class="bx bxs-edit"></i>Edit Profile</a></div>
+					 	<!-- <div class="ref_code_div"> 
+					 		<div>
+					 			Referral Code: 
+					 		</div>
+					 		<div class="ref_code">
+					 			ABHI45
+					 		</div>
+					 	</div> -->
 					 </div>
 					 
 					 <div class="prof_details">
-					 	<div class="prof_name sub_details"> Full Name . 
-					 		<div class="main_details" > Abhijit Gayen </div>
+					 	<div class="prof_name sub_details">
+					 		<div> 
+					 			Client ID . 
+					 		</div>
+					 		<div class="main_details" >
+					 			<input type="text" name="client_id" value ="ABHI45" readonly>
+					 		</div>
 					 	</div>
-					 	<div class="std_contact_no sub_details"> Contact No . 
-					 		<div class="main_details"> 7044136740</div>
+					 	<div class="prof_name sub_details">
+					 		<div> 
+					 			Referral Code . 
+					 		</div>
+					 		<div class="main_details" >
+					 			<input type="text" name="reff_code" value ="ABHI45" readonly>
+					 		</div>
 					 	</div>
-					 	<div class="contact_details sub_details">Address .
+					 	<div class="prof_name sub_details"> 
+					 		<div>
+					 			Full Name . 
+					 		</div>
+					 		<div class="main_details">
+					 			<input type="text" name="f_name" value ="Abhijit Gayen">
+					 			<i class="bx bxs-edit"></i>
+					 		</div>
+					 	</div>
+					 	<div class="prof_name sub_details">
+					 		<div> 
+					 			Email Id . 
+					 		</div>
+					 		<div class="main_details" >
+					 			<input type="text" name="Email_id" value ="agayen04@gmail.com" readonly>
+					 		</div>
+					 	</div>
+					 	<div class="std_contact_no sub_details">
+					 		<div>
+					 			WhatApps No<span class="note_red">*</span>.
+					 		</div>
+					 		<div class="main_details">
+					 			<input type="tel" name="ph_no" value="917044136740">
+					 			<i class="bx bxs-edit"></i>
+					 		</div>
+					 	</div>
+					 	<div>
+					 		<span class="note_red">*</span> Please enter WhatApps no with country code.
+					 	</div>
+					 	<!-- <div class="contact_details sub_details">Address .
 					 		<div class="main_details">
 					 		Vill - Subhasnagar
 					 		<br>
 					 		P.O - Chapla
 					 		<br>
-					 		P.S - Raidighi
-					 		<br>
 					 		Dist- South 24 PGS
 					 		<br>
-					 		State - West Bengal
+					 		West Bengal - 743349 
 					 		<br>
-					 		Country - India
-					 		<br>
-					 		Pin - 743349  
+					 		India
 					 		</div> 
-					 	</div>
+					 	</div> -->
+					 	<div class="profile_btns">
+					 		<div>
+								<button class="btn btn_cancel">Cancel</button>
+							</div>
+							<div>
+								<button class="btn btn_save" type='submit'>Save</button>
+							</div>
+						</div>
 					 </div>
 					</div>
+					</form>
 				</div>
 				<div class="stud_sub_con std_your_tasks" id="std_your_tasks" hidden>
-					<h2>Recent Tasks</h2>
-					<div class="recent_task_div" id="recent_task"><h3>Task_1</h3>
+					<h2>Pending Tasks</h2>
+					<div class="recent_task_head_div" id="recent_task">
+						<div class="recent_task_head">
+							<div>Task Id</div>
+							<div>Price </div>
+							<div>Subject</div>
+							<div>Status</div>
+							<div>Details</div>
+						</div>
+					</div>
+					<div class="recent_task_div" id="recent_task">
 						<div class="recent_task">
-							<div>Ass_no</div>
+							<div>AB123</div>
 							<div>500</div>
-							<div>deadline</div>
-							<div>Status</div>
+							<div>Math</div>
+							<div>Submited</div>
 							<div class="details_btn">Details</div>
 						</div>
 					</div>
-					<div class="recent_task_div"><h3>Task_2</h3>
+					<div class="recent_task_div">
 						<div class="recent_task">
-							<div>Ass_no</div>
+							<div>AB148</div>
 							<div>300</div>
-							<div>deadline</div>
-							<div>Status</div>
+							<div>Data Science</div>
+							<div>forwarded</div>
 							<div class="details_btn">Details</div>
 						</div>
 					</div>
-					<div class="recent_task_div"><h3>Task_3</h3>
+					<div class="recent_task_div">
 						<div class="recent_task">
-							<div>Ass_no</div>
-							<div>300</div>
-							<div>deadline</div>
-							<div>Status</div>
+							<div>AB789</div>
+							<div>1200</div>
+							<div>Project</div>
+							<div>Submited</div>
 							<div class="details_btn">Details</div>
 						</div>
 					</div>
 
 
-					<h2>Old Tasks</h2>
-					<div class="old_task_div" id="old_task" ><h3>Task_15</h3>
+					<h2>Completed Tasks</h2>
+					<div class="completed_task_head_div" id="complected_task">
+						<div class="completed_task_head">
+							<div>Task Id</div>
+							<div>Price </div>
+							<div>Subject</div>
+							<div>Status</div>
+							<div>Solution</div>
+						</div>
+					</div>
+					<div class="old_task_div" id="old_task" >
 						<div class="old_task">
 							<div>Ass_no</div>
 							<div>600</div>
 							<div>Subject</div>
+							<div>Completed</div>
 							<div class="solution_btn">Solution</div>
 						</div>
 					</div>
-					<div class="old_task_div"><h3>Task_14</h3>
+					<div class="old_task_div">
 						<div class="old_task">
 							<div>Ass_no</div>
 							<div>200</div>
 							<div>Subject</div>
+							<div>Completed</div>
 							<div class="solution_btn">Solution</div>
 						</div>
 					</div>
-					<div class="old_task_div"><h3>Task_13</h3>
+					<div class="old_task_div">
 						<div class="old_task">
 							<div>Ass_no</div>
 							<div>2000</div>
 							<div>Subject</div>
+							<div>Completed</div>
 							<div class="solution_btn">Solution</div>
 						</div>
 					</div>
-					<div class="old_task_div"><h3>Task_12</h3>
+					<div class="old_task_div">
 						<div class="old_task">
 							<div>Ass_no</div>
 							<div>1200</div>
 							<div>Subject</div>
+							<div>Completed</div>
 							<div class="solution_btn">Solution</div>
 						</div>
 					</div>
@@ -261,34 +339,30 @@
 	 		document.getElementById('div_other').style.display = 'none';
 	 	}
 	 }
+	 //handing the nav bar
+	const showMenu = (toggleId, navId) =>{
+    const toggle = document.getElementById(toggleId),
+    nav = document.getElementById(navId)
+    if(toggle && nav){
+        toggle.addEventListener('click', ()=>{
+            nav.classList.toggle('show')
+        })
+    	}
+	}
+	showMenu('nav-toggle','nav_rest');
+	/*===== ACTIVE AND REMOVE MENU =====*/
+	const navLink = document.querySelectorAll('.up_nav_link');   
+
+	function linkAction(){
+	  /*Remove menu mobile*/
+	  const navMenu = document.getElementById('nav_rest')
+	  navMenu.classList.remove('show')
+	}
+	navLink.forEach(n => n.addEventListener('click', linkAction));
 
 
 	function log_out_fn(){
 		window.location.href='../log_in.html';
-	}
-	let d_width=document.getElementById('all_body_for').offsetWidth;
-	//alert(d_width);
-	function shift_nav(){
-		if(d_width <= 800){
-			if(document.getElementById('dashboard_nav').style.left =='0px'){
-				document.getElementById('dashboard_nav').style.left='-170px';
-				document.getElementById('dash_nav_link').className='bx bx-chevrons-right';
-			}
-			else{
-				document.getElementById('dashboard_nav').style.left='0px';
-				document.getElementById('dash_nav_link').className='bx bx-chevrons-left';
-			}
-		console.log(document.getElementById('dashboard_nav').style.left);
-		}
-	}
-	function shift_nav_move(){
-		if(d_width <= 800){
-		document.getElementById('dashboard_nav').style.left='-170px';
-		document.getElementById('dash_nav_link').className='bx bx-chevrons-right';
-		}
-	}
-	window.onresize=function(event){
-		document.location.reload(true);
 	}
 </script>
 </html>
