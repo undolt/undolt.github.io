@@ -96,7 +96,7 @@ html{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: auto;
+    height: 60px;
   }
   .nav_logo_div{
     display: flex;
@@ -118,7 +118,7 @@ html{
     top: -100%;
     width: 100%;
     background-color: #fff;
-    transition: .5s;
+    transition: .7s;
     z-index: -1000;
   }
   .up_nav{
@@ -134,7 +134,7 @@ html{
 }
 
 .show{
-  top: 8vh;
+  top: 59px;
 }
 .dashboard_content{
   margin: 0px;
