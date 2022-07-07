@@ -165,6 +165,12 @@ html{
 
 /*Home pages*/
 /*For file upload*/
+.read_instraction{
+  color: red;
+  font-size: 15px;
+  text-shadow: none;
+  font-family: var(--body-font);
+}
 .upload_from{
   height: 450px;
   z-index: 100;
@@ -456,6 +462,13 @@ input,textarea,select{
   .std_profile_div{
     width: 100%;
     margin: 0px;
+  }
+  .div_stat{
+    width: 80px;
+    height: 80px;
+  }
+  .stat_no{
+  font-size: 30px;
   }
 }
 
